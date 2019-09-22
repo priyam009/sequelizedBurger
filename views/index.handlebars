@@ -1,0 +1,49 @@
+<div class="d-flex flex-md-row justify-content-around text-light custom-container">
+
+  <div class="d-flex flex-column justify-content-around custom-header">
+    <h1>Love it</h1>
+    <h1>List it</h1>
+    <h1>Burg-Eat</h1>
+  </div>
+
+  <div class="custom-image p-5">
+    <img class="img-fluid" src="assets/images/burger.svg" alt="">
+  </div>
+
+</div>
+
+<form>
+  <div class="custom-form text-center">
+    <label class="pr-5 mb-0" for="name">Love Burger:</label>
+    <input type="text" id="name" placeholder="Enter your favourite burger">
+    <button id="submit">List it!<i class="fas fa-hamburger"></i></button>
+  </div>
+</form>
+
+<div class="d-flex flex-md-row justify-content-around align-items-center main-content">
+  <div class="align-self-start">
+    <h3 class="m-3">The List</h3>
+    <ul>
+      {{#each burgers}}
+        {{#unless devoured}}
+          <div class="d-flex flex-md-row justify-content-between m-3 before-burger">
+            <h4 class="mb-0 align-self-center">{{burger_name}}</h3>
+            <button class="add-burger" data-id="{{id}}" data-devour="true">Devour It!</button>
+          </div>
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="align-self-start">
+    <h3 class="m-3">Devoured</h3>
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          <div class="m-3 after-burger">
+            <h4 class="mb-0 align-self-center">{{burger_name}}</h4>
+          </div>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
