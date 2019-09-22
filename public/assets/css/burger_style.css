@@ -1,0 +1,105 @@
+body {
+  background-color: #c4deea;
+}
+
+.custom-container{
+  background-color: #4d8781;
+}
+
+.custom-header h1 {
+  font-size: 100px;
+  font-family: 'Anton', sans-serif;
+  text-shadow: 0px 2px 11px #190B07;
+}
+
+.custom-header h1:first-child {
+  color: #ffd423;
+}
+
+.custom-header h1:nth-child(2) {
+  color: #7ed63f;
+}
+
+.custom-header h1:last-child {
+  color: #ff5023;
+}
+
+.custom-image img {
+  height: 350px;
+}
+
+.custom-form {
+  background-color: #c59c02;
+  padding: 20px;
+  font-family: 'Vollkorn SC', serif;
+  font-size: 20px;
+  box-shadow: 0px 0px 35px 9px rgba(0,0,0,0.75);
+}
+
+.custom-form label {
+  color: #121212;
+}
+
+.custom-form input {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 17px -6px rgba(0,0,0,0.45);
+  outline: none;
+  font-size: 15px;
+}
+
+.custom-form button {
+  width: 150px;
+  margin-left: 60px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 17px -6px rgba(0,0,0,0.45);
+}
+
+.custom-form button:hover {
+  background-color: #ff5023;
+  color: #fff;
+  border-color:#121212;
+}
+
+.fa-hamburger {
+  color: #121212;
+  padding-left: 10px;
+}
+
+.main-content {
+  min-height: 30vh;
+  font-family: 'Vollkorn SC', serif;
+  padding: 20px;
+  color: #fff;
+}
+
+.main-content div h3{
+  text-decoration: underline;
+  color: #121212;
+  text-shadow: 0px 0px 0px #121212;
+}
+
+.add-burger {
+  width: 130px;
+  margin-left: 60px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 17px -6px rgba(0,0,0,0.45);
+  font-size: 18px;
+}
+
+.add-burger:hover {
+  background-color: #ff5023;
+  color: #fff;
+  border-color:#121212;
+}
+
+.before-burger {
+  color: #319f5f;
+  text-shadow: 0px 0px 1px #000;
+}
+
+.after-burger {
+  color: #ff5023;
+  text-shadow: 0px 0px 1px #000;
+}
