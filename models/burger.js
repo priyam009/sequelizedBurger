@@ -8,11 +8,11 @@ module.exports = function(sequelize, DataTypes) {
       } 
     },
     devoured: {
-      type: DataTypes.BOOELAN,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false
     }
   });
 
-  return Burger;
+  return Burgers;
 };
