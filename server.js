@@ -22,12 +22,18 @@ app.use(express.urlencoded({ extended:true }));
 var exphbs = require('express-handlebars');
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars")
+app.set("view engine", "handlebars");
 
+//Require routes
 require("./controllers/burgers-api-routes")(app);
+require("./controllers/burgers-html-routes")(app);
 
 //Start server
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force: true}).then(function() {
+  db.Burgers.bulkCreate([
+    {burger_name: "Zinger Burger", devoured: false},
+    {burger_name: "Mc Chicken", devoured: true}
+  ])
   app.listen(PORT, function() {
     console.log("Server listening on https://localhost:" + PORT);
   });
