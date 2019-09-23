@@ -1,20 +1,20 @@
 var db = require('../models');
 
 module.exports = function(app) {
-  app.get('/api/posts', function(req, res) {
-    db.Burger.findAll({}).then(function(result) {
+  app.get('/api/burgers', function(req, res) {
+    db.Burgers.findAll({}).then(function(result) {
       return res.json(result);
     });
   });
 
-  app.post('/api/posts', function(req, res) {
-    db.Burger.create(req.body).then(function(result) {
+  app.post('/api/burgers', function(req, res) {
+    db.Burgers.create(req.body).then(function(result) {
       return res.json(result);
     });
   });
 
-  app.put('/api/posts', function(req, res) {
-    db.Burger.update(req.body,
+  app.put('/api/burgers', function(req, res) {
+    db.Burgers.update(req.body,
       {
         where: {
           id: req.body.id
@@ -24,8 +24,8 @@ module.exports = function(app) {
     });
   });
 
-  app.delete('/api/posts/:id', function(req,res) {
-    db.Burger.destroy({
+  app.delete('/api/burgers/:id', function(req, res) {
+    db.Burgers.destroy({
       where: {
         id: req.params.id
       }
