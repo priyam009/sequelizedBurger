@@ -80,7 +80,7 @@ body {
   text-shadow: 0px 0px 0px #121212;
 }
 
-.add-burger {
+.burger-button {
   width: 130px;
   margin-left: 60px;
   border-radius: 10px;
@@ -102,4 +102,10 @@ body {
 .after-burger {
   color: #ff5023;
   text-shadow: 0px 0px 1px #000;
+}
+
+.add-list:hover {
+  background-color: #319f5f;
+  color: #fff;
+  border-color:#121212;
 }
