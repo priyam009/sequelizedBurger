@@ -14,7 +14,10 @@ module.exports = function(app) {
   });
 
   app.put('/api/burgers', function(req, res) {
-    db.Burgers.update(req.body,
+    var devour = {
+      devoured: req.body.devoured
+    }
+    db.Burgers.update(devour,
       {
         where: {
           id: req.body.id
