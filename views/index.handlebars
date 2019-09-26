@@ -28,7 +28,7 @@
         {{#unless devoured}}
           <div class="d-flex flex-md-row justify-content-between m-3 before-burger">
             <h4 class="mb-0 align-self-center">{{burger_name}}</h3>
-            <button class="add-burger" data-id="{{id}}" data-devour="true">Devour It!</button>
+            <button class="add-burger burger-button" data-id="{{id}}" data-devour="true">Devour It!</button>
           </div>
         {{/unless}}
       {{/each}}
@@ -39,8 +39,9 @@
     <ul>
       {{#each burgers}}
         {{#if devoured}}
-          <div class="m-3 after-burger">
+          <div class="d-flex flex-md-row justify-content-between m-3 after-burger">
             <h4 class="mb-0 align-self-center">{{burger_name}}</h4>
+            <button class="add-list burger-button" data-id="{{id}}" data-devour="false">List It!</button>
           </div>
         {{/if}}
       {{/each}}
